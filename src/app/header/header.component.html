@@ -3,13 +3,13 @@
         <img class="brand-logo" src="./assets/logo.svg" alt="logo" aria-hidden="true" />
     </a>
     <!-- TODO: Don't show button if not necessary -->
-    <button mat-icon-button class="sidebar-button" aria-label="Example icon-button with menu icon"
-        [matMenuTriggerFor]="menu">
+    <span class="example-spacer"></span>
+    <button mat-icon-button *ngIf="responsiveMenuVisible" class="sidebar-button"
+        aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
         <mat-icon>menu</mat-icon>
     </button>
-    <span class="example-spacer"></span>
     <!-- TODO: Hide this menu if necessary (i.e. is mobile) -->
-    <ul class="menu-ul">
+    <ul class="menu-ul" *ngIf="!responsiveMenuVisible">
         <li>
             <a><span>About Me</span></a>
         </li>

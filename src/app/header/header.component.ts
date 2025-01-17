@@ -1,6 +1,6 @@
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, inject, signal } from '@angular/core';
+import { Component, HostListener, inject, OnInit, signal } from '@angular/core';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -28,11 +28,23 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     ])
   ]
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   responsiveMenuVisible: Boolean = false;
   pageYPosition: number = 0;
 
   constructor() { }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkScreenSize();
+  }
+  private checkScreenSize() {
+    const width = window.innerWidth;
+    this.responsiveMenuVisible = width < 768; // Adjust the width threshold as needed
+  }
+  ngOnInit() {
+    this.checkScreenSize(); // Initial check
+  }
 
   // @HostListener('window:scroll', ['getScrollPosition($event)'])
   // getScrollPosition(event: any) {
