@@ -7,6 +7,7 @@
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
   background-color: var(--secondary-color);
+  /* background-color: var(--mat-sys-surface); */
 }
 
 :root {
@@ -32,4 +33,48 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+/* Highlight Underline Animation: https://www.30secondsofcode.org/css/s/hover-underline-animation/ */
+.highlight-text {
+  color: var(--mat-sys-tertiary);
+  /* text-decoration: none; */
+  display: inline-block;
+  position: relative;
+}
+
+.highlight-text::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  background-color: var(--mat-sys-tertiary);
+}
+
+.highlight-text:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+
+
+.main-btn {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, Monospace;
+  line-height: 1;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 1.25rem 1.75rem;
+
 }
