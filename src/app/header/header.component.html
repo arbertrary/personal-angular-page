@@ -1,3 +1,30 @@
-<header class="brand-name" style="background-color: var(--primary-color);padding:10px">
+<!-- <header class="brand-name" style="background-color: var(--primary-color);padding:10px">
     <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true" />
-</header>
+</header> -->
+<nav [@animateMenu] class="navbar main-navbar on-top">
+    <div class="container">
+        <a>
+            <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true" />
+        </a>
+        <ul ngbNav class="menu-ul">
+            <li ngbNavItem>
+                <a><span>About Me</span></a>
+            </li>
+            <li ngbNavItem>
+                <a><span>Experience</span></a>
+            </li>
+            <li ngbNavItem>
+                <a><span>Education</span></a>
+            </li>
+            <li ngbNavItem>
+                <a><span>Projects</span></a>
+            </li>
+            <li ngbNavItem>
+                <a><span>Publications</span></a>
+            </li>
+            <li ngbNavItem>
+                <a><span>Contact</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
