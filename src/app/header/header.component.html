@@ -1,12 +1,45 @@
-<!-- <header class="brand-name" style="background-color: var(--primary-color);padding:10px">
-    <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true" />
-</header> -->
-<nav [@animateMenu] class="navbar main-navbar on-top">
+<mat-toolbar [@animateMenu] class="main-navbar">
+    <a>
+        <img class="brand-logo" src="./assets/logo.svg" alt="logo" aria-hidden="true" />
+    </a>
+    <span class="example-spacer"></span>
+    <ul class="menu-ul">
+        <li>
+            <a><span>About Me</span></a>
+        </li>
+        <li>
+            <a><span>Experience</span></a>
+        </li>
+        <li>
+            <a><span>Education</span></a>
+        </li>
+        <li>
+            <a><span>Projects</span></a>
+        </li>
+        <li>
+            <a><span>Publications</span></a>
+        </li>
+        <li>
+            <a><span>Contact</span></a>
+        </li>
+    </ul>
+    <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+    </button> -->
+    <button mat-icon-button class="sidebar-button" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
+<!-- 
+<nav [@animateMenu] class="navbar main-navbar on-top" [class.nav-shadow]='this.pageYPosition>0'>
     <div class="container">
         <a>
-            <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true" />
+            <img class="brand-logo" src="./assets/logo.svg" alt="logo" aria-hidden="true" />
         </a>
-        <ul ngbNav class="menu-ul">
+        <ul ngbNav #nav="" ngbNav class="menu-ul">
             <li ngbNavItem>
                 <a><span>About Me</span></a>
             </li>
@@ -26,5 +59,37 @@
                 <a><span>Contact</span></a>
             </li>
         </ul>
+
+        <div class="menu-wrapper">
+            <div [class.animate]='responsiveMenuVisible' (click)='responsiveMenuVisible = !responsiveMenuVisible'
+                class="hamburger-menu"></div>
+        </div>
+        <div class="menu-responsive" [ngStyle]="{'pointer-events': !responsiveMenuVisible ? 'none' : '' }">
+            <aside [class.aside-show]='responsiveMenuVisible' [class.nav-shadow]='this.pageYPosition>0' class="on-top">
+                <nav>
+                    <ol>
+                        <li>
+                            <a><span>About Me</span></a>
+                        </li>
+                        <li>
+                            <a><span>Experience</span></a>
+                        </li>
+                        <li>
+                            <a><span>Education</span></a>
+                        </li>
+                        <li>
+                            <a><span>Projects</span></a>
+                        </li>
+                        <li>
+                            <a><span>Publications</span></a>
+                        </li>
+                        <li>
+                            <a><span>Contact</span></a>
+                        </li>
+                    </ol>
+                </nav>
+            </aside>
+
+        </div>
     </div>
-</nav>
+</nav> -->

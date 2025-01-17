@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
-// import { MatToolbarModule } from '@angular/material/toolbar';
-import { trigger, style, query, transition, stagger, animate } from '@angular/animations'
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
+import { CommonModule } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [CommonModule, MatIconModule, MatButtonModule, MatToolbarModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   animations: [
@@ -24,5 +28,12 @@ import { trigger, style, query, transition, stagger, animate } from '@angular/an
   ]
 })
 export class HeaderComponent {
+  responsiveMenuVisible: Boolean = false;
+  pageYPosition: number = 0;
+
+  @HostListener('window:scroll', ['getScrollPosition($event)'])
+  getScrollPosition(event: any) {
+    this.pageYPosition = window.pageYOffset
+  }
 
 }
