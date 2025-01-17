@@ -2,7 +2,13 @@
     <a>
         <img class="brand-logo" src="./assets/logo.svg" alt="logo" aria-hidden="true" />
     </a>
+    <!-- TODO: Don't show button if not necessary -->
+    <button mat-icon-button class="sidebar-button" aria-label="Example icon-button with menu icon"
+        [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
     <span class="example-spacer"></span>
+    <!-- TODO: Hide this menu if necessary (i.e. is mobile) -->
     <ul class="menu-ul">
         <li>
             <a><span>About Me</span></a>
@@ -29,67 +35,28 @@
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
         <mat-icon>share</mat-icon>
     </button> -->
-    <button mat-icon-button class="sidebar-button" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-    </button>
+
 </mat-toolbar>
-<!-- 
-<nav [@animateMenu] class="navbar main-navbar on-top" [class.nav-shadow]='this.pageYPosition>0'>
-    <div class="container">
-        <a>
-            <img class="brand-logo" src="./assets/logo.svg" alt="logo" aria-hidden="true" />
-        </a>
-        <ul ngbNav #nav="" ngbNav class="menu-ul">
-            <li ngbNavItem>
-                <a><span>About Me</span></a>
-            </li>
-            <li ngbNavItem>
-                <a><span>Experience</span></a>
-            </li>
-            <li ngbNavItem>
-                <a><span>Education</span></a>
-            </li>
-            <li ngbNavItem>
-                <a><span>Projects</span></a>
-            </li>
-            <li ngbNavItem>
-                <a><span>Publications</span></a>
-            </li>
-            <li ngbNavItem>
-                <a><span>Contact</span></a>
-            </li>
-        </ul>
-
-        <div class="menu-wrapper">
-            <div [class.animate]='responsiveMenuVisible' (click)='responsiveMenuVisible = !responsiveMenuVisible'
-                class="hamburger-menu"></div>
-        </div>
-        <div class="menu-responsive" [ngStyle]="{'pointer-events': !responsiveMenuVisible ? 'none' : '' }">
-            <aside [class.aside-show]='responsiveMenuVisible' [class.nav-shadow]='this.pageYPosition>0' class="on-top">
-                <nav>
-                    <ol>
-                        <li>
-                            <a><span>About Me</span></a>
-                        </li>
-                        <li>
-                            <a><span>Experience</span></a>
-                        </li>
-                        <li>
-                            <a><span>Education</span></a>
-                        </li>
-                        <li>
-                            <a><span>Projects</span></a>
-                        </li>
-                        <li>
-                            <a><span>Publications</span></a>
-                        </li>
-                        <li>
-                            <a><span>Contact</span></a>
-                        </li>
-                    </ol>
-                </nav>
-            </aside>
-
-        </div>
-    </div>
-</nav> -->
+<mat-menu #menu="matMenu" class="responsive-menu">
+    <button mat-menu-item class="menu-button">
+        <!-- <mat-icon>dialpad</mat-icon> -->
+        <a><span>About Me</span></a>
+    </button>
+    <button mat-menu-item class="menu-button">
+        <!-- <mat-icon>voicemail</mat-icon> -->
+        <a><span>Experience</span></a>
+    </button>
+    <button mat-menu-item class="menu-button">
+        <!-- <mat-icon>notifications_off</mat-icon> -->
+        <a><span>Education</span></a>
+    </button>
+    <button mat-menu-item class="menu-button">
+        <a><span>Projects</span></a>
+    </button>
+    <button mat-menu-item class="menu-button">
+        <a><span>Publications</span></a>
+    </button>
+    <button mat-menu-item class="menu-button">
+        <a><span>Contact</span></a>
+    </button>
+</mat-menu>

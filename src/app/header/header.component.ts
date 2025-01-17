@@ -1,15 +1,16 @@
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject, signal } from '@angular/core';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, MatIconModule, MatButtonModule, MatToolbarModule],
+  imports: [CommonModule, MatIconModule, MatButtonModule, MatMenuModule, MatToolbarModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   animations: [
@@ -31,9 +32,11 @@ export class HeaderComponent {
   responsiveMenuVisible: Boolean = false;
   pageYPosition: number = 0;
 
-  @HostListener('window:scroll', ['getScrollPosition($event)'])
-  getScrollPosition(event: any) {
-    this.pageYPosition = window.pageYOffset
-  }
+  constructor() { }
+
+  // @HostListener('window:scroll', ['getScrollPosition($event)'])
+  // getScrollPosition(event: any) {
+  //   this.pageYPosition = window.pageYOffset
+  // }
 
 }
