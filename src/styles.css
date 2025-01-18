@@ -38,10 +38,14 @@ body {
 
 /* Highlight Underline Animation: https://www.30secondsofcode.org/css/s/hover-underline-animation/ */
 .highlight-text {
-  color: var(--mat-sys-primary);
   /* text-decoration: none; */
   display: inline-block;
   position: relative;
+  color: var(--mat-sys-primary);
+}
+
+.highlight-text.onDark {
+  color: var(--mat-sys-primary-container);
 }
 
 .highlight-text::after {
@@ -55,6 +59,11 @@ body {
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
   background-color: var(--mat-sys-primary);
+
+}
+
+.highlight-text.onDark::after {
+  background-color: var(--mat-sys-primary-container);
 }
 
 .highlight-text:hover::after {

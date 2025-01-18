@@ -1,5 +1,10 @@
-footer {
+.footer {
     color: var(--mat-sys-primary);
+
+    fa-icon {
+        font-size: var(--mat-sys-label-large-line-height);
+        color: var(--mat-sys-primary);
+    }
 
     .footer-left-bar:after,
     .footer-right-bar:after {
@@ -34,6 +39,8 @@ footer {
                 margin-bottom: 33px;
             }
         }
+
+
     }
 
     .footer-right-bar {
