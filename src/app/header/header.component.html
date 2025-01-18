@@ -14,19 +14,19 @@
             <a><span class="highlight-text onDark" (click)="scroll('about')">About Me</span></a>
         </li>
         <li>
-            <a><span class="highlight-text onDark">Experience</span></a>
+            <a><span class="highlight-text onDark" (click)="scroll('experience')">Experience</span></a>
         </li>
-        <li>
+        <!-- <li>
             <a><span class="highlight-text onDark">Education</span></a>
+        </li> -->
+        <li>
+            <a><span class="highlight-text onDark" (click)="scroll('projects')">Projects</span></a>
         </li>
         <li>
-            <a><span class="highlight-text onDark">Projects</span></a>
+            <a><span class="highlight-text onDark" (click)="scroll('publications')">Publications</span></a>
         </li>
         <li>
-            <a><span class="highlight-text onDark">Publications</span></a>
-        </li>
-        <li>
-            <a><span class="highlight-text onDark">Contact</span></a>
+            <a><span class="highlight-text onDark" (click)="scroll('contact')">Contact</span></a>
         </li>
     </ul>
     <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
@@ -44,19 +44,18 @@
     </button>
     <button mat-menu-item class="menu-button">
         <!-- <mat-icon>voicemail</mat-icon> -->
-        <a><span>Experience</span></a>
+        <a><span (click)="scroll('experience')">Experience</span></a>
     </button>
-    <button mat-menu-item class="menu-button">
-        <!-- <mat-icon>notifications_off</mat-icon> -->
+    <!-- <button mat-menu-item class="menu-button">
         <a><span>Education</span></a>
+    </button> -->
+    <button mat-menu-item class="menu-button">
+        <a><span (click)="scroll('projects')">Projects</span></a>
     </button>
     <button mat-menu-item class="menu-button">
-        <a><span>Projects</span></a>
+        <a><span (click)="scroll('publications')">Publications</span></a>
     </button>
     <button mat-menu-item class="menu-button">
-        <a><span>Publications</span></a>
-    </button>
-    <button mat-menu-item class="menu-button">
-        <a><span>Contact</span></a>
+        <a><span (click)="scroll('contact')">Contact</span></a>
     </button>
 </mat-menu>
