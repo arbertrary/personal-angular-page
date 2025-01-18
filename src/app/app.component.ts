@@ -3,12 +3,13 @@ import { HeaderComponent } from "./header/header.component";
 import { HomeComponent } from "./home/home.component";
 
 import { ParticlesConfig } from './particles-config';
+import { FooterComponent } from "./footer/footer.component";
 
 declare let particlesJS: any; // Required to be properly interpreted by TypeScript.
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, HomeComponent],
+  imports: [HeaderComponent, HomeComponent, FooterComponent],
   templateUrl: "./app.component.html",
   styleUrls: ['./app.component.css'],
 })
