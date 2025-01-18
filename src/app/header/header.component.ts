@@ -32,7 +32,8 @@ export class HeaderComponent implements OnInit {
   responsiveMenuVisible: Boolean = false;
   pageYPosition: number = 0;
 
-  constructor() { }
+  constructor() {
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {

@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
-  background-color: var(--secondary-color);
-  /* background-color: var(--mat-sys-surface); */
+  /* background-color: var(--secondary-color); */
+  background-color: var(--mat-sys-surface);
 }
 
 :root {
