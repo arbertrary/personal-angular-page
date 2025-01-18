@@ -1,8 +1,8 @@
 <mat-toolbar [@animateMenu] class="main-navbar">
-    <a>
-        <img class="brand-logo" src="./assets/logo.svg" alt="logo" aria-hidden="true" />
-    </a>
+
+    <img (click)="scroll('banner')" class="brand-logo" src="./assets/logo.svg" alt="logo" aria-hidden="true" />
     <!-- TODO: Don't show button if not necessary -->
+    <h1 class="name-title">Armin Bernstetter</h1>
     <span class="example-spacer"></span>
     <button #menuTrigger="matMenuTrigger" mat-icon-button *ngIf="responsiveMenuVisible" class="sidebar-button"
         aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
@@ -38,24 +38,23 @@
 
 </mat-toolbar>
 <mat-menu #menu="matMenu" class="responsive-menu">
-    <button mat-menu-item class="menu-button">
+    <button mat-menu-item class="menu-button" (click)="scroll('about')">
         <!-- <mat-icon>dialpad</mat-icon> -->
-        <a><span (click)="scroll('about')">About Me</span></a>
+        <a><span>About Me</span></a>
     </button>
-    <button mat-menu-item class="menu-button">
-        <!-- <mat-icon>voicemail</mat-icon> -->
-        <a><span (click)="scroll('experience')">Experience</span></a>
+    <button mat-menu-item class="menu-button" (click)="scroll('experience')">
+        <a><span>Experience</span></a>
     </button>
     <!-- <button mat-menu-item class="menu-button">
         <a><span>Education</span></a>
     </button> -->
-    <button mat-menu-item class="menu-button">
-        <a><span (click)="scroll('projects')">Projects</span></a>
+    <button mat-menu-item class="menu-button" (click)="scroll('projects')">
+        <a><span>Projects</span></a>
     </button>
-    <button mat-menu-item class="menu-button">
-        <a><span (click)="scroll('publications')">Publications</span></a>
+    <button mat-menu-item class="menu-button" (click)="scroll('publications')">
+        <a><span>Publications</span></a>
     </button>
-    <button mat-menu-item class="menu-button">
-        <a><span (click)="scroll('contact')">Contact</span></a>
+    <button mat-menu-item class="menu-button" (click)="scroll('contact')">
+        <a><span>Contact</span></a>
     </button>
 </mat-menu>

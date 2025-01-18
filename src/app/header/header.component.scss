@@ -28,6 +28,15 @@
         }
 
     }
+
+    .name-title {
+        padding-left: 13px;
+        color: var(--mat-sys-primary-container);
+    }
+
+    .brand-logo {
+        cursor: pointer;
+    }
 }
 
 ::ng-deep .responsive-menu {
