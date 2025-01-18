@@ -1,3 +1,7 @@
+// See this stackoverflow answer:
+// https://stackoverflow.com/a/57409528
+// https://vincentgarreau.com/particles.js/#default
+
 export const ParticlesConfig = {
     fullScreen: {
         enable: true,
@@ -8,17 +12,17 @@ export const ParticlesConfig = {
             value: 70,
             density: {
                 enable: true,
-                value_area: 1400
+                value_area: 2000
             }
         },
         color: {
-            value: '#283593'
+            value: '#773acc'
         },
         shape: {
             type: 'circle',
             stroke: {
-                width: 1,
-                color: '#283593'
+                width: 2,
+                color: '#773acc'
             },
             polygon: {
                 nb_sides: 6
@@ -35,7 +39,7 @@ export const ParticlesConfig = {
             }
         },
         size: {
-            value: 2,
+            value: 1,
             random: true,
             anim: {
                 enable: true,
@@ -47,13 +51,13 @@ export const ParticlesConfig = {
         line_linked: {
             enable: true,
             distance: 150,
-            color: '#283593',
+            color: '#773acc',
             opacity: 1,
             width: 1
         },
         move: {
             enable: true,
-            speed: 8,
+            speed: 1,
             direction: 'none',
             random: true,
             straight: false,
@@ -71,7 +75,7 @@ export const ParticlesConfig = {
         events: {
             onhover: {
                 enable: true,
-                mode: 'grab'
+                mode: 'bubble'
             },
             onclick: {
                 enable: false,
@@ -89,6 +93,11 @@ export const ParticlesConfig = {
             repulse: {
                 distance: 250,
                 duration: 2
+            },
+            bubble: {
+                distance: 200,
+                size: 20,
+                opacity: 0.1
             }
         }
     },
