@@ -90,3 +90,9 @@ body {
 .section-box {
   padding: 130px 0;
 }
+
+.section-title {
+  color: var(--mat-sys-secondary);
+  font-size: var(--mat-sys-headline-small-size);
+
+}
