@@ -1,5 +1,5 @@
 <div class="footer">
-    <div [@animateFooter]>
+    <div [@animateFooter] *ngIf="leftBarVisible">
         <ul class="footer-left-bar d-none d-md-block">
             <li>
                 <a href="https://github.com/arbertrary" target='_blank'>
@@ -29,8 +29,32 @@
     </div>
 
     <div class="footer-credits text-center">
-        <fa-icon [icon]="faAngular"></fa-icon>
+        <ul class="bottomIcons" *ngIf="!leftBarVisible">
+            <li>
+                <a href="https://github.com/arbertrary" target='_blank'>
+                    <i class="fab fa-github"></i>
+                    <fa-icon [icon]="faGithub"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/abernstetter/" target='_blank'>
+                    <fa-icon [icon]="faLinkedin"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://scholar.google.de/citations?user=MvbBAFwAAAAJ&hl=de" target='_blank'>
+                    <fa-icon [icon]="faGoogleScholar"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://orcid.org/0000-0003-1603-1699" target='_blank'>
+                    <fa-icon [icon]="faOrcid"></fa-icon>
+                </a>
+            </li>
+        </ul>
         <div>Built with Angular by Armin Bernstetter</div>
+        <fa-icon [icon]="faAngular"></fa-icon>
+
         <!-- <a href="https://github.com/andresjosehr/andresjosehr-portfolio" target="_blank"
             rel="nofollow noopener noreferrer">
             <fa-icon [icon]="faAngular"></fa-icon>

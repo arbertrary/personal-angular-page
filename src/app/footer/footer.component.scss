@@ -99,4 +99,14 @@
             }
         }
     }
+
+    ul.bottomIcons {
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 10px;
+
+        li {
+            list-style: none;
+        }
+    }
 }

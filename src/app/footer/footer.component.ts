@@ -1,13 +1,14 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, HostListener } from '@angular/core';
 import { trigger, query, stagger, animate, style, transition } from '@angular/animations'
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub, faLinkedin, faAngular, faGoogleScholar, faOrcid } from '@fortawesome/free-brands-svg-icons';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-footer',
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, CommonModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
   animations: [
@@ -32,11 +33,23 @@ export class FooterComponent implements OnInit {
   faAngular = faAngular;
   faGoogleScholar = faGoogleScholar;
   faOrcid = faOrcid;
+  leftBarVisible: boolean = true;
 
   constructor(
   ) { }
 
-  ngOnInit(): void {
+
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkScreenSize();
+  }
+  private checkScreenSize() {
+    const width = window.innerWidth;
+    this.leftBarVisible = width > 768; // Adjust the width threshold as needed
+  }
+  ngOnInit() {
+    this.checkScreenSize(); // Initial check
   }
 
 }

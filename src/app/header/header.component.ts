@@ -34,6 +34,16 @@ export class HeaderComponent implements OnInit {
 
   constructor() {
   }
+  scroll(el: string) {
+    console.log("scroll")
+    if (document.getElementById(el)) {
+      console.log("getElbyID")
+      document.getElementById(el)!.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // this.router.navigate(['/home']).then(()=> document.getElementById(el).scrollIntoView({behavior: 'smooth'}) );
+    }
+
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {

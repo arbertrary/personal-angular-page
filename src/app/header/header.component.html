@@ -11,7 +11,7 @@
     <!-- TODO: Hide this menu if necessary (i.e. is mobile) -->
     <ul class="menu-ul" *ngIf="!responsiveMenuVisible">
         <li>
-            <a><span class="highlight-text onDark">About Me</span></a>
+            <a><span class="highlight-text onDark" (click)="scroll('about')">About Me</span></a>
         </li>
         <li>
             <a><span class="highlight-text onDark">Experience</span></a>
@@ -40,7 +40,7 @@
 <mat-menu #menu="matMenu" class="responsive-menu">
     <button mat-menu-item class="menu-button">
         <!-- <mat-icon>dialpad</mat-icon> -->
-        <a><span>About Me</span></a>
+        <a><span (click)="scroll('about')">About Me</span></a>
     </button>
     <button mat-menu-item class="menu-button">
         <!-- <mat-icon>voicemail</mat-icon> -->
