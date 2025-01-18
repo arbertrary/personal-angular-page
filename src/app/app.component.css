@@ -14,7 +14,7 @@ header {
 }
 
 #particles-js canvas {
-  display: block;
+  display: flex;
   vertical-align: bottom;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);

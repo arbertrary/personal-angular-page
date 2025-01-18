@@ -19,8 +19,8 @@ body {
 
 button.primary {
   padding: 10px;
-  border: solid 1px var(--primary-color);
-  background: var(--primary-color);
+  border: solid 1px var(--mat-sys-primary);
+  background: var(--mat-sys-primary);
   color: white;
   border-radius: 8px;
 }
@@ -64,12 +64,11 @@ body {
 
 
 .main-btn {
-  color: var(--primary-color);
+  color: var(--mat-sys-primary);
   background-color: transparent;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--mat-sys-primary);
   border-radius: 3px;
-  font-size: 13px;
-  font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, Monospace;
+  font-size: var(--mat-sys-body-medium-size);
   line-height: 1;
   -webkit-text-decoration: none;
   text-decoration: none;

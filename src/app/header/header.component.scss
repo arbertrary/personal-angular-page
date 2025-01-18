@@ -11,6 +11,7 @@
     .sidebar-button {
         color: var(--mat-sys-primary-container);
         padding-left: 10px;
+        cursor: pointer;
     }
 
     .menu-ul {
@@ -20,15 +21,17 @@
         li {
             margin: 0px 13px;
             color: var(--mat-sys-primary-container);
-            font-size: smaller;
+            font-size: var(--mat-sys-label-large-size);
+            cursor: pointer;
+
         }
 
     }
 }
 
 ::ng-deep .responsive-menu {
-    background: var(--primary-color) !important;
-    background-color: var(--primary-color) !important;
+    background: var(--mat-sys-primary) !important;
+    background-color: var(--mat-sys-primary) !important;
 
     span {
         color: var(--mat-sys-primary-container) !important;
