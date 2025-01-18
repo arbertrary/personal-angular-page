@@ -1,4 +1,4 @@
-<mat-toolbar [@animateMenu] class="main-navbar">
+<mat-toolbar [@animateMenu] class="main-navbar" [class.toolbar-shadow]='this.pageYPosition>0'>
 
     <img (click)="scroll('banner')" class="brand-logo" src="./assets/logo.svg" alt="logo" aria-hidden="true" />
     <!-- TODO: Don't show button if not necessary -->

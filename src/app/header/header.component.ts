@@ -57,9 +57,9 @@ export class HeaderComponent implements OnInit {
     this.checkScreenSize(); // Initial check
   }
 
-  // @HostListener('window:scroll', ['getScrollPosition($event)'])
-  // getScrollPosition(event: any) {
-  //   this.pageYPosition = window.pageYOffset
-  // }
+  @HostListener('window:scroll', ['getScrollPosition($event)'])
+  getScrollPosition(event: any) {
+    this.pageYPosition = window.scrollY;
+  }
 
 }
