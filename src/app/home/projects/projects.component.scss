@@ -1,21 +1,24 @@
 .projects {
+    // padding: 2rem;
+
     .container {
         display: table;
         height: 100vh;
         margin: auto;
     }
 
-    .projects-section {
-        padding: 2rem;
-    }
+    // .projects-section {
+    //     padding: 2rem;
+    // }
 
-    .projects-section h2 {
+    h2 {
         text-align: center;
         font-size: 2rem;
         margin-bottom: 1.5rem;
     }
 
     .projects-grid {
+        padding-top: 2rem;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
