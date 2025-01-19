@@ -1,18 +1,37 @@
 <section class="section about" id="about">
     <div class="container">
         <div class="section-box">
-
             <h3 class="section-title">
                 <span>About Me</span>
             </h3>
-            <div style="display:flex">
-                <ul>
-                    <li>Test</li>
-                    <li>Test</li>
-                    <li>Test</li>
-                </ul>
-                <div class="about-img-container">
-                    <img class="rounded" width="400" src="assets/img/speaking.jpg">
+
+            <!-- About Me Content -->
+            <div class="about-grid">
+                <!-- First Row -->
+                <img src="assets/img/speaking.jpg" alt="About me photo 1" class="photo" />
+                <div class="text description">Hi! I'm [Your Name]. I'm passionate about [your passions]. I specialize in
+                    [your
+                    skills or expertise].</div>
+
+                <!-- Second Row -->
+
+                <div class="text description">When I'm not coding, I enjoy [your hobbies or interests]. I’m always
+                    looking for
+                    exciting projects to work on!</div>
+                <img src="assets/img/application.jpg" alt="About me photo 2" class="photo" />
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills">
+                <h3 class="section-title">Skills & Technologies</h3>
+                <div class="icons">
+                    <fa-icon [icon]="faAngular" title="Angular"></fa-icon>
+                    <fa-icon [icon]="faJs" title="JavaScript"></fa-icon>
+                    <fa-icon [icon]="faPython" title="Python"></fa-icon>
+                    <fa-icon [icon]="faFlask" title="Flask"></fa-icon>
+                    <!-- <fa-icon [icon]="faHtml5" title="HTML5"></fa-icon>
+            <fa-icon [icon]="faCss3" title="CSS3"></fa-icon> -->
+                    <!-- Add more icons as needed -->
                 </div>
             </div>
         </div>

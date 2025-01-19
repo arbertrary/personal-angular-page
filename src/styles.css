@@ -89,6 +89,8 @@ body {
 
 .section-box {
   padding: 130px 0;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .section-title {
