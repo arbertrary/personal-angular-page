@@ -50,7 +50,8 @@
 
     .project-tile p {
         margin: 0 0 1rem;
-        color: #666;
+        color: var(--mat-sys-outline);
+        ;
     }
 
     .technologies-used {
@@ -63,8 +64,8 @@
     }
 
     .technologies-used li {
-        background-color: #e0f7fa;
-        color: #00796b;
+        background-color: var(--mat-sys-primary-container);
+        color: var(--mat-sys-primary);
         padding: 0.25rem 0.75rem;
         border-radius: 4px;
         font-size: 0.875rem;

@@ -8,10 +8,11 @@
                 <h3>{{entry.title}}</h3>
                 <p class="details">
                     <span class="authors">{{entry.authors}}</span>
+                    <br>
                     <span class="year">{{entry.year}}</span>
                     <span class="venue">{{entry.venue}}</span>
                 </p>
-                <a href="https://doi.org/10.1234/example-doi" class="doi-link" target="_blank">DOI:
+                <a href="https://doi.org/{{entry.doi}}" class="doi-link" target="_blank">DOI:
                     {{entry.doi}}</a>
                 <div class="bibtex">
                     <mat-accordion>

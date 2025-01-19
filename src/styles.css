@@ -94,5 +94,9 @@ body {
 .section-title {
   color: var(--mat-sys-secondary);
   font-size: var(--mat-sys-headline-small-size);
+}
 
+
+.description {
+  color: var(--mat-sys-outline);
 }

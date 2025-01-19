@@ -3,5 +3,31 @@
         display: table;
         height: 100vh;
         margin: auto;
+        max-width: 50%;
+    }
+
+    .contact-text {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 1.25rem;
+        // color: var(--mat-sys-outline);
+    }
+
+    .contact-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 2rem;
+
+        .big-icon {
+            color: var(--mat-sys-primary);
+            cursor: pointer;
+            // font-size: 1.25rem;
+        }
+
+        .big-icon:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+        }
     }
 }
