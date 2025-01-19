@@ -1,7 +1,7 @@
 export var bibtexEntries = [
   {
     doi: "10.1016/j.cageo.2025.105855",
-    title: "Virtual fieldwork in immersive environments using game engines",
+    title: "Virtual Fieldwork in Immersive Environments Using Game Engines",
     authors: "Bernstetter, Armin; Kwasnitschka, Tom; Karstens, Jens; Schlüter, Markus; Peters, Isabella",
     venue: "Computers & Geosciences",
     year: 2025,
@@ -70,7 +70,7 @@ export var bibtexEntries = [
     doi: "10.1145/3365523",
     title: "Emote-Controlled: Obtaining Implicit Viewer Feedback Through Emote-Based Sentiment Analysis on Comments of Popular Twitch.Tv Channels",
     authors: "Kobs, Konstantin; Zehe, Albin; Bernstetter, Armin; Chibane, Julian; Pfister, Jan; Tritscher, Julian; Hotho, Andreas",
-    venue: "Trans. Soc. Comput.",
+    venue: "ACM Transactions on Social Computing",
     year: 2020,
     bibtex: `@article{kobs2020emote,
       address = {New York, NY, USA},
