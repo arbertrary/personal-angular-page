@@ -6,7 +6,7 @@
             </h3>
             <div class="publication-item" *ngFor="let entry of entries">
                 <h3>{{entry.title}}</h3>
-                <p class="details">
+                <p class="details description">
                     <span class="authors">{{entry.authors}}</span>
                     <br>
                     <span class="year">{{entry.year}}</span>
@@ -27,10 +27,11 @@
                                 <pre>{{ entry.bibtex }}</pre>
                                 <!-- <textarea>{{entry.bibtex}}</textarea> -->
                                 <br>
-                                <mat-icon class="copy-bibtex" aria-hidden="false" aria-label="Example home icon"
-                                    fontIcon="content_copy" [cdkCopyToClipboard]="entry.bibtex"
-                                    (click)="openSnackBar()"></mat-icon>
+
                             </div>
+                            <mat-icon class="copy-bibtex" aria-hidden="false" aria-label="Example home icon"
+                                fontIcon="content_copy" [cdkCopyToClipboard]="entry.bibtex"
+                                (click)="openSnackBar()"></mat-icon>
                         </mat-expansion-panel>
                     </mat-accordion>
                 </div>
