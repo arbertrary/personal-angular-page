@@ -63,10 +63,13 @@
         font-family: monospace;
         font-size: 0.875rem;
         white-space: pre-wrap;
+        // word-wrap: break-word;
+        overflow-wrap: anywhere;
 
         pre {
             white-space: pre-wrap;
             // word-wrap: break-word;
+            overflow-wrap: anywhere;
             text-align: justify;
             font-size: var(--mat-sys-body-small-size);
             color: var(--mat-sys-outline);
