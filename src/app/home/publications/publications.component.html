@@ -4,39 +4,35 @@
             <h3 class="section-title">
                 <span>Publications</span>
             </h3>
-            <div class="publication-item" *ngFor="let entry of entries">
-                <h3>{{entry.title}}</h3>
-                <p class="details description">
-                    <span class="authors">{{entry.authors}}</span>
-                    <br>
-                    <span class="year">{{entry.year}}</span>
-                    <span class="venue">{{entry.venue}}</span>
-                </p>
-                <a href="https://doi.org/{{entry.doi}}" class="doi-link" target="_blank">DOI:
-                    {{entry.doi}}</a>
-                <div class="bibtex">
-                    <mat-accordion>
-                        <mat-expansion-panel>
-                            <mat-expansion-panel-header>
-                                <mat-panel-title>Show BibTeX</mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <div class="bibtex-content">
-                                <!-- <div *ngIf="entries">
+            <div class="publications-list">
+                <div class="publication-item" *ngFor="let entry of entries">
+                    <h3>{{entry.title}}</h3>
+                    <p class="details description">
+                        <span class="authors">{{entry.authors}}</span>
+                        <br>
+                        <span class="year">{{entry.year}}</span>
+                        <span class="venue">{{entry.venue}}</span>
+                    </p>
+                    <a href="https://doi.org/{{entry.doi}}" class="doi-link" target="_blank">DOI:
+                        {{entry.doi}}</a>
+                    <div class="bibtex">
+                        <mat-accordion>
+                            <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>Show BibTeX</mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <div class="bibtex-content">
                                     <pre>{{ entry.bibtex }}</pre>
-                                </div> -->
-                                <pre>{{ entry.bibtex }}</pre>
-                                <!-- <textarea>{{entry.bibtex}}</textarea> -->
-                                <br>
-
-                            </div>
-                            <mat-icon class="copy-bibtex" aria-hidden="false" aria-label="Example home icon"
-                                fontIcon="content_copy" [cdkCopyToClipboard]="entry.bibtex"
-                                (click)="openSnackBar()"></mat-icon>
-                        </mat-expansion-panel>
-                    </mat-accordion>
+                                    <br>
+                                </div>
+                                <mat-icon class="copy-bibtex" aria-hidden="false" aria-label="Example home icon"
+                                    fontIcon="content_copy" [cdkCopyToClipboard]="entry.bibtex"
+                                    (click)="openSnackBar()"></mat-icon>
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
