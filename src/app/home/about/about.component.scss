@@ -16,6 +16,10 @@
 
         @media (max-width: 768px) {
             grid-template-columns: 1fr;
+
+            #lastImage {
+                order: +1;
+            }
         }
 
         .text {
