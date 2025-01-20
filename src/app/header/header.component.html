@@ -1,14 +1,12 @@
 <mat-toolbar [@animateMenu] class="main-navbar" [class.toolbar-shadow]='this.pageYPosition>0'>
 
     <img (click)="scroll('banner')" class="brand-logo" src="./assets/logo.svg" alt="logo" aria-hidden="true" />
-    <!-- TODO: Don't show button if not necessary -->
     <h1 *ngIf="!responsiveMenuVisible" class="name-title">Armin Bernstetter</h1>
     <span class="example-spacer"></span>
     <button #menuTrigger="matMenuTrigger" mat-icon-button *ngIf="responsiveMenuVisible" class="sidebar-button"
         aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
         <mat-icon>{{menuTrigger.menuOpen ? "close" : "menu"}}</mat-icon>
     </button>
-    <!-- TODO: Hide this menu if necessary (i.e. is mobile) -->
     <ul class="menu-ul" *ngIf="!responsiveMenuVisible">
         <li>
             <a><span class="highlight-text onDark" (click)="scroll('about')">About Me</span></a>
@@ -16,7 +14,6 @@
         <li>
             <a><span class="highlight-text onDark" (click)="scroll('experience')">Experience</span></a>
         </li>
-
         <li>
             <a><span class="highlight-text onDark" (click)="scroll('projects')">Projects</span></a>
         </li>
@@ -32,15 +29,11 @@
 </mat-toolbar>
 <mat-menu #menu="matMenu" class="responsive-menu">
     <button mat-menu-item class="menu-button" (click)="scroll('about')">
-        <!-- <mat-icon>dialpad</mat-icon> -->
         <a><span>About Me</span></a>
     </button>
     <button mat-menu-item class="menu-button" (click)="scroll('experience')">
         <a><span>Experience</span></a>
     </button>
-    <!-- <button mat-menu-item class="menu-button">
-        <a><span>Education</span></a>
-    </button> -->
     <button mat-menu-item class="menu-button" (click)="scroll('projects')">
         <a><span>Projects</span></a>
     </button>

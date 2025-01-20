@@ -102,3 +102,8 @@ body {
 .description {
   color: var(--mat-sys-outline);
 }
+
+h2,
+h3 {
+  color: var(--mat-sys-neutral-variant20);
+}
