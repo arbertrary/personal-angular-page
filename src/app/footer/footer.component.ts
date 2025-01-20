@@ -46,7 +46,7 @@ export class FooterComponent implements OnInit {
   }
   private checkScreenSize() {
     const width = window.innerWidth;
-    this.leftBarVisible = width > 768; // Adjust the width threshold as needed
+    this.leftBarVisible = width > 1200; // Adjust the width threshold as needed
   }
   ngOnInit() {
     this.checkScreenSize(); // Initial check

@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faEnvelopeOpenText, faCircleArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faCircleArrowUp, faEnvelope, faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-contact',
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, MatTooltipModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
