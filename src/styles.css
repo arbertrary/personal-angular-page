@@ -39,7 +39,7 @@ body {
 /* Highlight Underline Animation: https://www.30secondsofcode.org/css/s/hover-underline-animation/ */
 .highlight-text {
   /* text-decoration: none; */
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   color: var(--mat-sys-primary);
 }
