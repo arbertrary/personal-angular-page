@@ -66,6 +66,8 @@
     }
 
     .project-tile:hover {
+        position: relative;
+        z-index: var(--middle-high-z);
         transform: translateY(-5px);
         /* Lift effect */
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -104,10 +106,13 @@
         border-radius: 2px;
         width: 100%;
         transform-origin: top left;
+        position: relative;
+        z-index: var(--high-z);
     }
 
     .thumbnail:hover {
         transform: scale(2.5);
         border: 1px solid var(--mat-sys-primary);
+        z-index: var(--high-z);
     }
 }

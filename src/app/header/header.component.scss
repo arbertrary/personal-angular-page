@@ -3,7 +3,7 @@
     height: var(--mat-sys-display-medium-line-height);
 
     position: fixed;
-    z-index: 9 !important;
+    z-index: var(--highest-z) !important;
 
     // padding: 10px;
     // display: flex;

@@ -11,10 +11,13 @@ body {
 }
 
 :root {
-  --primary-color: #50A;
+  /* --primary-color: #50A;
   --secondary-color: #DAF;
   --accent-color: #e8e7fa;
-  --shadow-color: #E8E8E8;
+  --shadow-color: #E8E8E8; */
+  --highest-z: 10;
+  --high-z: 8;
+  --middle-high-z: 6;
 }
 
 button.primary {
@@ -43,7 +46,7 @@ body {
 /* Highlight Underline Animation: https://www.30secondsofcode.org/css/s/hover-underline-animation/ */
 .highlight-text {
   /* text-decoration: none; */
-  /* display: inline-block; */
+  display: inline-block;
   position: relative;
   color: var(--mat-sys-primary);
 }
