@@ -77,18 +77,15 @@
             </div>
 
             <!-- Skills Section -->
-            <div class="skills">
+            <!-- <div class="skills">
                 <h3 class="section-title">Skills & Technologies</h3>
                 <div class="icons">
-                    <fa-icon [icon]="faAngular" title="Angular"></fa-icon>
-                    <fa-icon [icon]="faJs" title="JavaScript"></fa-icon>
-                    <fa-icon [icon]="faPython" title="Python"></fa-icon>
-                    <fa-icon [icon]="faFlask" title="Flask"></fa-icon>
-                    <!-- <fa-icon [icon]="faHtml5" title="HTML5"></fa-icon>
-            <fa-icon [icon]="faCss3" title="CSS3"></fa-icon> -->
-                    <!-- Add more icons as needed -->
+                    <div class="logo" *ngFor="let b of brands">
+                        <img [src]="b.path" alt="{{b.name}}">
+                        <span>{{b.name}}</span>
+                    </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
