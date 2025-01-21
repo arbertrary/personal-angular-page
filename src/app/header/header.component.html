@@ -1,6 +1,6 @@
 <mat-toolbar [@animateMenu] class="main-navbar" [class.toolbar-shadow]='this.pageYPosition>0'>
 
-    <img (click)="scroll('banner')" class="brand-logo" src="./assets/logo.svg" alt="logo" aria-hidden="true" />
+    <img [routerLink]="[]" fragment="banner" class="brand-logo" src="./assets/logo.svg" alt="logo" aria-hidden="true" />
     <h1 *ngIf="!responsiveMenuVisible" class="name-title">Armin Bernstetter</h1>
     <span class="example-spacer"></span>
     <button #menuTrigger="matMenuTrigger" mat-icon-button *ngIf="responsiveMenuVisible" class="sidebar-button"
@@ -9,38 +9,38 @@
     </button>
     <ul class="menu-ul" *ngIf="!responsiveMenuVisible">
         <li>
-            <a><span class="highlight-text onDark" (click)="scroll('about')">About Me</span></a>
+            <a [routerLink]="[]" fragment="about"><span class="highlight-text onDark">About Me</span></a>
         </li>
         <li>
-            <a><span class="highlight-text onDark" (click)="scroll('experience')">Experience</span></a>
+            <a [routerLink]="[]" fragment="experience"><span class="highlight-text onDark">Experience</span></a>
         </li>
         <li>
-            <a><span class="highlight-text onDark" (click)="scroll('projects')">Projects</span></a>
+            <a [routerLink]="[]" fragment="projects"><span class="highlight-text onDark">Projects</span></a>
         </li>
         <li>
-            <a><span class="highlight-text onDark" (click)="scroll('publications')">Publications</span></a>
+            <a [routerLink]="[]" fragment="publications"><span class="highlight-text onDark">Publications</span></a>
         </li>
         <li>
-            <a><span class="highlight-text onDark" (click)="scroll('contact')">Contact</span></a>
+            <a [routerLink]="[]" fragment="contact"><span class="highlight-text onDark">Contact</span></a>
         </li>
     </ul>
 
 
 </mat-toolbar>
 <mat-menu #menu="matMenu" class="responsive-menu">
-    <button mat-menu-item class="menu-button" (click)="scroll('about')">
+    <button mat-menu-item class="menu-button" [routerLink]="[]" fragment="about">
         <a><span>About Me</span></a>
     </button>
-    <button mat-menu-item class="menu-button" (click)="scroll('experience')">
+    <button mat-menu-item class="menu-button" [routerLink]="[]" fragment="experience">
         <a><span>Experience</span></a>
     </button>
-    <button mat-menu-item class="menu-button" (click)="scroll('projects')">
+    <button mat-menu-item class="menu-button" [routerLink]="[]" fragment="projects">
         <a><span>Projects</span></a>
     </button>
-    <button mat-menu-item class="menu-button" (click)="scroll('publications')">
+    <button mat-menu-item class="menu-button" [routerLink]="[]" fragment="publications">
         <a><span>Publications</span></a>
     </button>
-    <button mat-menu-item class="menu-button" (click)="scroll('contact')">
+    <button mat-menu-item class="menu-button" [routerLink]="[]" fragment="contact">
         <a><span>Contact</span></a>
     </button>
 </mat-menu>

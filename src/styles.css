@@ -30,6 +30,10 @@ body {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -62,14 +66,15 @@ body {
 
 }
 
-.highlight-text.onDark::after {
-  background-color: var(--mat-sys-primary-container);
-}
-
 .highlight-text:hover::after {
   transform: scaleX(1);
   transform-origin: bottom center;
 }
+
+.highlight-text.onDark::after {
+  background-color: var(--mat-sys-primary-container);
+}
+
 
 
 .main-btn {
