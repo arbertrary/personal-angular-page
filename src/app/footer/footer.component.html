@@ -1,4 +1,7 @@
 <div class="footer">
+    <div class="go-up-btn" *ngIf="pageYPosition>2500">
+        <fa-icon [routerLink]="[]" fragment="banner" [icon]="faUp" size="2x"></fa-icon>
+    </div>
     <div [@animateFooter] *ngIf="leftBarVisible">
         <ul class="footer-left-bar d-none d-md-block">
             <li>
@@ -24,7 +27,7 @@
             </li>
         </ul>
         <!-- <div class="footer-right-bar d-none d-md-block">
-            <a href="mailto:andresjosehr@gmail.com" target='_blank'>andresjosehr&#64;gmail.com </a>
+            <fa-icon [icon]="faUp" size="2x"></fa-icon>
         </div> -->
     </div>
 

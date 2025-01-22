@@ -3,12 +3,15 @@ import { trigger, query, stagger, animate, style, transition } from '@angular/an
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub, faLinkedin, faAngular, faGoogleScholar, faOrcid } from '@fortawesome/free-brands-svg-icons';
+import { faCircleArrowUp } from '@fortawesome/free-solid-svg-icons';
+
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-footer',
-  imports: [FontAwesomeModule, CommonModule],
+  imports: [FontAwesomeModule, CommonModule, RouterModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
   animations: [
@@ -33,12 +36,23 @@ export class FooterComponent implements OnInit {
   faAngular = faAngular;
   faGoogleScholar = faGoogleScholar;
   faOrcid = faOrcid;
+  faUp = faCircleArrowUp;
+
   leftBarVisible: boolean = true;
+  pageYPosition: number = 0;
 
   constructor(
   ) { }
 
+  ngOnInit() {
+    this.checkScreenSize(); // Initial check
+  }
 
+
+  @HostListener('window:scroll', ['getScrollPosition($event)'])
+  getScrollPosition(event: any) {
+    this.pageYPosition = window.scrollY;
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -48,8 +62,6 @@ export class FooterComponent implements OnInit {
     const width = window.innerWidth;
     this.leftBarVisible = width > 1200; // Adjust the width threshold as needed
   }
-  ngOnInit() {
-    this.checkScreenSize(); // Initial check
-  }
+
 
 }

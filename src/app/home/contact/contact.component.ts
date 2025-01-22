@@ -24,6 +24,5 @@ export class ContactComponent {
     } else {
       // this.router.navigate(['/home']).then(()=> document.getElementById(el).scrollIntoView({behavior: 'smooth'}) );
     }
-
   }
 }
