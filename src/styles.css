@@ -42,6 +42,14 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+a {
+  color: inherit;
+}
+
+fa-icon {
+  color: var(--mat-sys-primary);
+}
+
 
 /* Highlight Underline Animation: https://www.30secondsofcode.org/css/s/hover-underline-animation/ */
 .highlight-text {
