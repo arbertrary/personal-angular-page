@@ -82,7 +82,7 @@ body {
 
 .main-btn {
   color: var(--mat-sys-primary);
-  background-color: transparent;
+  background-color: var(--mat-sys-surface);
   border: 1px solid var(--mat-sys-primary);
   border-radius: 3px;
   font-size: var(--mat-sys-body-medium-size);

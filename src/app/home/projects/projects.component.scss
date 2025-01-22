@@ -111,7 +111,8 @@
     }
 
     .thumbnail:hover {
-        transform: scale(2.5);
+        transform: scale(2);
+        transition: transform 0.25s ease-out;
         border: 1px solid var(--mat-sys-primary);
         z-index: var(--high-z);
     }
