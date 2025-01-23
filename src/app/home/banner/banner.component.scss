@@ -1,5 +1,6 @@
 .banner {
     min-height: 100vh;
+    padding-top: calc(2* var(--mat-sys-display-medium-line-height));
 
     .container {
         display: table;
