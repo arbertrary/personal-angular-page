@@ -98,7 +98,11 @@
     .content {
         flex-grow: 1;
         margin-top: 2rem;
+
         // background: var(--mat-sys-surface);
+        li {
+            margin-left: 1rem;
+        }
     }
 
     .description {
